@@ -25,9 +25,9 @@ class SecretMenuLolXD extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-        ['Tutorial']
+        ['Tutorial'],
 		['Extra-1', 'Extra-2', 'Extra-4', 'Extra-5', 'Piss-Old', 'He-Be-Rapin', 'What', 'Cock', 'Extra-3']
-	];
+    ];
 	var curDifficulty:Int = 1;
 
 	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true];
