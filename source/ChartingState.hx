@@ -1442,7 +1442,20 @@ class ChartingState extends MusicBeatState
 		var noteType = 0;
 		noteType = Std.int(stepperNoteTypes.value);
 
-
+		if (FlxG.keys.pressed.ALT)
+			noteType = 1;
+		if (FlxG.keys.pressed.ONE)
+			noteType = 2;
+		if (FlxG.keys.pressed.TWO)
+			noteType = 3;
+		if (FlxG.keys.pressed.THREE)
+			noteType = 4;
+		if (FlxG.keys.pressed.FOUR)
+			noteType = 5;
+		if (FlxG.keys.pressed.FIVE)
+			noteType = 6;
+		if (FlxG.keys.pressed.SIX)
+			noteType = 7;
 
 		if (_song.mania == 2 || _song.mania == 5)
 		{
