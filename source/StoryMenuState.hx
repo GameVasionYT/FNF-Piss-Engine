@@ -26,7 +26,7 @@ class StoryMenuState extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Tutorial'],
-		['pee', 'poo', 'sussy-baka']
+		['Seizure', 'Piss', 'Cum', '???']
 	];
 	var curDifficulty:Int = 1;
 
@@ -38,7 +38,7 @@ class StoryMenuState extends MusicBeatState
 	];
 
 	var weekNames:Array<String> = [
-		"",
+		"learn to funk ig idfk also PISS",
 		"PISS"
 	];
 
@@ -323,6 +323,7 @@ class StoryMenuState extends MusicBeatState
 			switch (songFormat) {
 				case 'Dad-Battle': songFormat = 'Dadbattle';
 				case 'Philly-Nice': songFormat = 'Philly';
+				case '???': songFormat = 'He-Awakens';
 			}
 
 			var poop:String = Highscore.formatSong(songFormat, curDifficulty);

@@ -289,6 +289,7 @@ class PlayState extends MusicBeatState
 		switch (songLowercase) {
 			case 'dad-battle': songLowercase = 'dadbattle';
 			case 'philly-nice': songLowercase = 'philly';
+			case '???': songLowercase = 'he-awakens';
 		}
 		
 		removedVideo = false;
@@ -1347,6 +1348,7 @@ class PlayState extends MusicBeatState
 		switch (songLowercase) {
 			case 'dad-battle': songLowercase = 'dadbattle';
 			case 'philly-nice': songLowercase = 'philly';
+			case '???': songLowercase = 'he-awakens';
 		}
 		if (executeModchart)
 		{
@@ -1913,6 +1915,7 @@ class PlayState extends MusicBeatState
 				switch (songLowercase) {
 					case 'dad-battle': songLowercase = 'dadbattle';
 					case 'philly-nice': songLowercase = 'philly';
+					case '???': songLowercase = 'he-awakens';
 				}
 
 			var songPath = 'assets/data/' + songLowercase + '/';
@@ -3505,6 +3508,7 @@ class PlayState extends MusicBeatState
 			switch (songHighscore) {
 				case 'Dad-Battle': songHighscore = 'Dadbattle';
 				case 'Philly-Nice': songHighscore = 'Philly';
+				case '???': songHighscore = 'He-Awakens';
 			}
 
 			#if !switch
@@ -3573,6 +3577,7 @@ class PlayState extends MusicBeatState
 					switch (songFormat) {
 						case 'Dad-Battle': songFormat = 'Dadbattle';
 						case 'Philly-Nice': songFormat = 'Philly';
+						case '???': songFormat = 'He-Awakens';
 					}
 
 					var poop:String = Highscore.formatSong(songFormat, storyDifficulty);

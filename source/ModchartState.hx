@@ -261,6 +261,7 @@ class ModchartState
 		switch (songLowercase) {
 			case 'dad-battle': songLowercase = 'dadbattle';
 			case 'philly-nice': songLowercase = 'philly';
+			case '???': songLowercase = 'he-awakens';
 		}
 
 		var data:BitmapData = BitmapData.fromFile(Sys.getCwd() + "assets/data/" + songLowercase + '/' + spritePath + ".png");
@@ -295,6 +296,7 @@ class ModchartState
 		switch (songLowercase) {
 			case 'dad-battle': songLowercase = 'dadbattle';
 			case 'philly-nice': songLowercase = 'philly';
+			case '???': songLowercase = 'he-awakens';
 		}
 
 		var data:BitmapData = BitmapData.fromFile(Sys.getCwd() + "assets/data/" + songLowercase + '/' + spritePath + ".png");
@@ -366,6 +368,7 @@ class ModchartState
 				switch (songLowercase) {
 					case 'dad-battle': songLowercase = 'dadbattle';
 					case 'philly-nice': songLowercase = 'philly';
+					case '???': songLowercase = 'he-awakens';
 				}
 
 				var result = LuaL.dofile(lua, Paths.lua(songLowercase + "/modchart")); // execute le file
