@@ -26,7 +26,7 @@ class SecretMenuLolXD extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
         ['Tutorial'],
-		['Extra-1', 'Extra-2', 'Extra-4', 'Extra-5', 'Piss-Old', 'He-Be-Rapin', 'What', 'Cock', 'Extra-3']
+		['Extra-1', 'Extra-2', 'Extra-4', 'Extra-5', 'Piss-Old', 'What', 'Cock', 'Extra-3']
     ];
 	var curDifficulty:Int = 1;
 
@@ -347,18 +347,18 @@ class SecretMenuLolXD extends MusicBeatState
 		curDifficulty += change;
 
 		if (curDifficulty < 0)
-			curDifficulty = 2;
-		if (curDifficulty > 2)
+			curDifficulty = 0;
+		if (curDifficulty > 0)
 			curDifficulty = 0;
 
 		sprDifficulty.offset.x = 0;
 
 		switch (curDifficulty)
 		{
-			case 0:
+			case 1:
 				sprDifficulty.animation.play('easy');
 				sprDifficulty.offset.x = 20;
-			case 1:
+			case 0:
 				sprDifficulty.animation.play('normal');
 				sprDifficulty.offset.x = 70;
 			case 2:

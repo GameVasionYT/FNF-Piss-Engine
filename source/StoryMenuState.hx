@@ -39,7 +39,7 @@ class StoryMenuState extends MusicBeatState
 
 	var weekNames:Array<String> = [
 		"learn to funk ig idfk also PISS",
-		"PISS"
+		"PISS MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
 	];
 
 	var txtWeekTitle:FlxText;
@@ -347,18 +347,18 @@ class StoryMenuState extends MusicBeatState
 		curDifficulty += change;
 
 		if (curDifficulty < 0)
-			curDifficulty = 2;
-		if (curDifficulty > 2)
+			curDifficulty = 0;
+		if (curDifficulty > 0)
 			curDifficulty = 0;
 
 		sprDifficulty.offset.x = 0;
 
 		switch (curDifficulty)
 		{
-			case 0:
+			case 1:
 				sprDifficulty.animation.play('easy');
 				sprDifficulty.offset.x = 20;
-			case 1:
+			case 0:
 				sprDifficulty.animation.play('normal');
 				sprDifficulty.offset.x = 70;
 			case 2:
