@@ -316,7 +316,7 @@ class TitleState extends MusicBeatState
 			{
 				// Get current version of Kade Engine
 				
-				var http = new haxe.Http("https://raw.githubusercontent.com/KadeDev/Kade-Engine/master/version.downloadMe");
+				var http = new haxe.Http("https://raw.githubusercontent.com/GameVasionYT/FNF-Piss-Mod/main/version.downloadMe");
 				var returnedData:Array<String> = [];
 				
 				http.onData = function (data:String)
@@ -445,13 +445,15 @@ class TitleState extends MusicBeatState
 			// credTextShit.text = "Friday";
 			// credTextShit.screenCenter();
 			case 13:
-				addMoreText('Friday');
+				createCoolText(['Friday']);
 			// credTextShit.visible = true;
 			case 14:
-				addMoreText('Night');
+				deleteCoolText();
+				createCoolText(['Night']);
 			// credTextShit.text += '\nNight';
 			case 15:
-				addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+				deleteCoolText();
+				createCoolText(['Funkin', 'Piss Mod']); // credTextShit.text += '\nFunkin';
 
 			case 16:
 				skipIntro();
