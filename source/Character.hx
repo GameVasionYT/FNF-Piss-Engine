@@ -500,8 +500,7 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 			case 'pissman':
-				tex = Paths.getSparrowAtlas('characters/piss_sprite', 'shared');
-				frames = tex;
+				frames = Paths.getSparrowAtlas('characters/piss_sprite');
 				animation.addByPrefix('idle', 'Piss Idle', 24);
 				animation.addByPrefix('singUP', 'Piss Up', 24);
 				animation.addByPrefix('singRIGHT', 'Piss Right', 24);
