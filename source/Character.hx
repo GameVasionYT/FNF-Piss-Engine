@@ -499,6 +499,21 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+			case 'pissman':
+				frames = Paths.getSparrowAtlas('characters/piss_sprite');
+				animation.addByPrefix('idle', 'Piss Idle', 24);
+				animation.addByPrefix('singUP', 'Piss Up', 24);
+				animation.addByPrefix('singRIGHT', 'Piss Right', 24);
+				animation.addByPrefix('singDOWN', 'Piss Down', 24);
+				animation.addByPrefix('singLEFT', 'Piss Left', 24);
+
+				addOffset('idle');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+
+				playAnim('idle');
 		}
 
 		dance();

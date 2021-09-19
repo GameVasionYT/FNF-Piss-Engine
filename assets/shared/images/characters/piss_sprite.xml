@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="piss_sprite.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Piss Down0000" x="0" y="0" width="243" height="368"/>
+	<SubTexture name="Piss Idle0000" x="243" y="0" width="301" height="390" frameX="-7" frameY="0" frameWidth="309" frameHeight="390"/>
+	<SubTexture name="Piss Idle0001" x="544" y="0" width="302" height="385" frameX="-6" frameY="-5" frameWidth="309" frameHeight="390"/>
+	<SubTexture name="Piss Idle0002" x="846" y="0" width="304" height="381" frameX="-4" frameY="-9" frameWidth="309" frameHeight="390"/>
+	<SubTexture name="Piss Idle0003" x="1150" y="0" width="309" height="381" frameX="0" frameY="-9" frameWidth="309" frameHeight="390"/>
+	<SubTexture name="Piss Idle0004" x="1150" y="0" width="309" height="381" frameX="0" frameY="-9" frameWidth="309" frameHeight="390"/>
+	<SubTexture name="Piss Idle0005" x="1150" y="0" width="309" height="381" frameX="0" frameY="-9" frameWidth="309" frameHeight="390"/>
+	<SubTexture name="Piss Idle0006" x="846" y="0" width="304" height="381" frameX="-4" frameY="-9" frameWidth="309" frameHeight="390"/>
+	<SubTexture name="Piss Idle0007" x="544" y="0" width="302" height="385" frameX="-6" frameY="-5" frameWidth="309" frameHeight="390"/>
+	<SubTexture name="Piss Idle0008" x="243" y="0" width="301" height="390" frameX="-7" frameY="0" frameWidth="309" frameHeight="390"/>
+	<SubTexture name="Piss Idle0009" x="243" y="0" width="301" height="390" frameX="-7" frameY="0" frameWidth="309" frameHeight="390"/>
+	<SubTexture name="Piss Idle0010" x="243" y="0" width="301" height="390" frameX="-7" frameY="0" frameWidth="309" frameHeight="390"/>
+	<SubTexture name="Piss Right0000" x="1459" y="0" width="297" height="395" frameX="-1" frameY="0" frameWidth="298" frameHeight="395"/>
+	<SubTexture name="Piss Right0001" x="1459" y="0" width="297" height="395" frameX="-1" frameY="0" frameWidth="298" frameHeight="395"/>
+	<SubTexture name="Piss Right0002" x="0" y="395" width="297" height="395" frameX="0" frameY="0" frameWidth="298" frameHeight="395"/>
+	<SubTexture name="Piss Right0003" x="0" y="395" width="297" height="395" frameX="0" frameY="0" frameWidth="298" frameHeight="395"/>
+	<SubTexture name="Piss Up0000" x="297" y="395" width="304" height="409"/>
+	<SubTexture name="Piss left0000" x="601" y="395" width="229" height="389"/>
+</TextureAtlas>

@@ -25,7 +25,6 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['Tutorial'],
 		['Seizure', 'Piss', 'Cum', '???']
 	];
 	var curDifficulty:Int = 1;
@@ -33,19 +32,18 @@ class StoryMenuState extends MusicBeatState
 	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true];
 
 	var weekCharacters:Array<Dynamic> = [
-		['', 'bf', 'gf'],
 		['dad', 'bf', 'gf']
 	];
 
 	var weekNames:Array<String> = [
-		"learn to funk ig idfk also PISS",
 		"PISS MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
 	];
 
 	var txtWeekTitle:FlxText;
 
+
 	var curWeek:Int = 0;
-	var weekSprites:FlxSprite;
+	//var weekSprites:FlxSprite;
 
 	var txtTracklist:FlxText;
 
@@ -90,19 +88,30 @@ class StoryMenuState extends MusicBeatState
 		rankText.size = scoreText.size;
 		rankText.screenCenter(X);
 
+		var pressEnter = new FlxText();
+		pressEnter.text = "\n\nPRESS ENTER"; // set text's text to say "Hello, World!"
+		pressEnter.color = FlxColor.YELLOW; // set the color to cyan
+		pressEnter.size = 22; // set the text's size to 32px
+		pressEnter.alignment = FlxTextAlign.CENTER; // center the text
+
+		var pissWeek:FlxSprite = new FlxSprite().loadGraphic(Paths.image('storymenu/thefunny'));
+		pissWeek.screenCenter();
+		add(pissWeek);
+		
+
 		var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 		var yellowBG:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 400, 0xFFF9CF51);
-
+		//var blackBG:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 400, 0x000000); // commented out cause black bg is automatically done lmao
 		grpWeekText = new FlxTypedGroup<MenuItem>();
-		add(grpWeekText);
+		//add(grpWeekText);
 
 		var blackBarThingie:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, 56, FlxColor.BLACK);
-		add(blackBarThingie);
+		//add(blackBarThingie);
 
 		grpWeekCharacters = new FlxTypedGroup<MenuCharacter>();
 
 		grpLocks = new FlxTypedGroup<FlxSprite>();
-		add(grpLocks);
+		//add(grpLocks);
 
 		trace("Line 70");
 
@@ -132,22 +141,22 @@ class StoryMenuState extends MusicBeatState
 
 		trace("Line 96");
 
-		weekSprites = new FlxSprite(yellowBG.x, yellowBG.y).loadGraphic(Paths.image('weekspriteSheet'), true, 1280, 400);
-		weekSprites.animation.add('week0', [0], 0, false);
-		weekSprites.animation.add('week1', [1], 0, false);
-		weekSprites.animation.add('week2', [2], 0, false);
-		weekSprites.animation.add('week3', [3], 0, false);
-		weekSprites.animation.add('week4', [4], 0, false);
-		weekSprites.animation.add('week5', [5], 0, false);
-		weekSprites.animation.add('week6', [0], 0, false);
-		weekSprites.antialiasing = true;
+		//weekSprites = new FlxSprite(yellowBG.x, yellowBG.y).loadGraphic(Paths.image('weekspriteSheet'), true, 1280, 400);
+		//weekSprites.animation.add('week0', [0], 0, false);
+		//weekSprites.animation.add('week1', [1], 0, false);
+		//weekSprites.animation.add('week2', [2], 0, false);
+		//weekSprites.animation.add('week3', [3], 0, false);
+		//weekSprites.animation.add('week4', [4], 0, false);
+		//weekSprites.animation.add('week5', [5], 0, false);
+		//weekSprites.animation.add('week6', [0], 0, false);
+		//weekSprites.antialiasing = true;
 
 		grpWeekCharacters.add(new MenuCharacter(0, 100, 0.5, false));
 		grpWeekCharacters.add(new MenuCharacter(450, 25, 0.9, true));
 		grpWeekCharacters.add(new MenuCharacter(850, 100, 0.5, true));
 
 		difficultySelectors = new FlxGroup();
-		add(difficultySelectors);
+		//add(difficultySelectors);
 
 		trace("Line 124");
 
@@ -177,18 +186,18 @@ class StoryMenuState extends MusicBeatState
 
 		trace("Line 150");
 
-		add(yellowBG);
-		add(grpWeekCharacters);
-		add(weekSprites);
+		//add(yellowBG);
+		//add(grpWeekCharacters);
+		//add(weekSprites);
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, yellowBG.x + yellowBG.height + 100, 0, "Tracks", 32);
 		txtTracklist.alignment = CENTER;
 		txtTracklist.font = rankText.font;
 		txtTracklist.color = 0xFFe55777;
-		add(txtTracklist);
+		//add(txtTracklist);
 		// add(rankText);
-		add(scoreText);
-		add(txtWeekTitle);
+		//add(scoreText);
+		//add(txtWeekTitle);
 
 		updateText();
 
@@ -226,11 +235,11 @@ class StoryMenuState extends MusicBeatState
 				{
 					if (gamepad.justPressed.DPAD_UP)
 					{
-						changeWeek(-1);
+						//changeWeek(-1);
 					}
 					if (gamepad.justPressed.DPAD_DOWN)
 					{
-						changeWeek(1);
+						//changeWeek(1);
 					}
 
 					if (gamepad.pressed.DPAD_RIGHT)
@@ -244,22 +253,22 @@ class StoryMenuState extends MusicBeatState
 
 					if (gamepad.justPressed.DPAD_RIGHT)
 					{
-						changeDifficulty(1);
+						//changeDifficulty(1);
 					}
 					if (gamepad.justPressed.DPAD_LEFT)
 					{
-						changeDifficulty(-1);
+						//changeDifficulty(-1);
 					}
 				}
 
 				if (FlxG.keys.justPressed.UP)
 				{
-					changeWeek(-1);
+					//changeWeek(-1);
 				}
 
 				if (FlxG.keys.justPressed.DOWN)
 				{
-					changeWeek(1);
+					//changeWeek(1);
 				}
 
 				if (controls.RIGHT)
@@ -272,10 +281,11 @@ class StoryMenuState extends MusicBeatState
 				else
 					leftArrow.animation.play('idle');
 
-				if (controls.RIGHT_P)
-					changeDifficulty(1);
-				if (controls.LEFT_P)
-					changeDifficulty(-1);
+				//if (controls.RIGHT_P)
+					//changeDifficulty(1);
+				//if (controls.LEFT_P)
+					//changeDifficulty(-1);
+
 			}
 
 			if (controls.ACCEPT)
@@ -298,6 +308,10 @@ class StoryMenuState extends MusicBeatState
 	var selectedWeek:Bool = false;
 	var stopspamming:Bool = false;
 
+	function selectedFunnyWeek()
+	{
+		// will do later
+	}
 	function selectWeek()
 	{
 		if (weekUnlocked[curWeek])
@@ -390,7 +404,7 @@ class StoryMenuState extends MusicBeatState
 			curWeek = 0;
 		if (curWeek < 0)
 			curWeek = weekData.length - 1;
-		weekSprites.animation.play('week' + curWeek);
+		//weekSprites.animation.play('week' + curWeek);
 		var bullShit:Int = 0;
 
 		for (item in grpWeekText.members)

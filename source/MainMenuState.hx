@@ -29,7 +29,7 @@ class MainMenuState extends MusicBeatState
 	var menuItems:FlxTypedGroup<FlxSprite>;
 
 	#if !switch
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'donate', 'options', 'secret'];
+	var optionShit:Array<String> = ['story mode', 'freeplay', 'pain', 'options', 'secret'];
 	#else
 	var optionShit:Array<String> = ['story mode', 'freeplay'];
 	#end
@@ -92,6 +92,7 @@ class MainMenuState extends MusicBeatState
 
 		for (i in 0...optionShit.length)
 		{
+			
 			var menuItem:FlxSprite = new FlxSprite(0, FlxG.height * 1.6);
 			menuItem.frames = tex;
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
@@ -102,6 +103,8 @@ class MainMenuState extends MusicBeatState
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = true;
+			if (!FlxG.save.data.notquitepain && optionShit[i] == 'pain') 
+				menuItem.color = FlxColor.fromHSL(menuItem.color.hue, menuItem.color.saturation, 0.2, 1);
 			if (firstStart)
 				FlxTween.tween(menuItem,{y: 60 + (i * 160)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
 					{ 
@@ -180,10 +183,38 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'donate')
-				{
-					fancyOpenURL("https://ninja-muffin24.itch.io/funkin");
-				}
+				if (optionShit[curSelected] == 'pain')
+					{
+						if (FlxG.save.data.notquitepain) 
+							{
+								selectedSomethin = true;
+								var poop:String = Highscore.formatSong('he-awakens-pain', 1);
+	
+								trace(poop);
+								
+								PlayState.SONG = Song.loadFromJson(poop, 'he-awakens');
+								PlayState.isStoryMode = true;
+								PlayState.storyDifficulty = 1;
+								
+								PlayState.storyWeek = 0;
+								LoadingState.loadAndSwitchState(new PlayState());
+							}
+							else 
+							{
+								selectedSomethin = true;
+								var poop:String = Highscore.formatSong('he-awakens-pain', 1);
+	
+								trace(poop);
+								
+								PlayState.SONG = Song.loadFromJson(poop, 'he-awakens');
+								PlayState.isStoryMode = true;
+								PlayState.storyDifficulty = 1;
+								
+								PlayState.storyWeek = 0;
+								LoadingState.loadAndSwitchState(new PlayState());
+								FlxG.sound.play(Paths.sound('missnote1'));
+							}
+					}
 				else
 				{
 					selectedSomethin = true;
